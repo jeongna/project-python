@@ -4,30 +4,10 @@ import pygame as pg
 #캐릭터 클래스 구현
 class Character(pygame.sprite.Sprite):
     def __init__(self, x, y, image):
-        super().__init__()
         self.image = pg.image.load(image)
         self.rect = self.image.get_rect()
         self.rect.x = x
         self.rect.y = y
-
-class Moving_Character(Character):
-    def __init__(self,x,y,image,answer):
-        Character.__init__(self,x,y,image)
-        self.answer=answer
-
-    def moving(self,answer):
-        if self.answer==True:
-            if self.rect.x>600 :
-                self.rect.y+=100
-
-            elif self.rect.x<=600 and self.rect.y<100:
-                self.rect.x-=100
-
-            elif self.rect.x<=200 and self.rect.y>=100:
-                self.rect.y+=100
-
-            elif self.rect.x>200:
-                self.rect.x+=100
 
 
 
@@ -74,7 +54,7 @@ pg.draw.rect(screen,BLACK,[700,450,100,100],1)
 
 
 #지구 사진 load
-earth_image=pg.image.load("C:\\Users\\user\Desktop\지구.jpeg")
+earth_image=pg.image.load("C:\\Users\\user\\Desktop\\project-python\\project-python\\지구.jpeg")
 
 #지구 사진 크기 조절
 earth_image=pg.transform.scale(earth_image,(200,200))
@@ -91,13 +71,13 @@ title="idol_bluemarble"
 pg.display.set_caption(title)
 
 #플레이어 생성
-rabbit_image=pg.image.load("C:\\Users\\user\Desktop\\rabbit1.jpg")
-fox_image=pg.image.load("C:\\Users\\user\Desktop\\fox.jpeg")
+rabbit_image=pg.image.load("C:\\Users\\user\\Desktop\\project-python\\project-python\\rabbit1.jpg")
+fox_image=pg.image.load("C:\\Users\\user\\Desktop\\project-python\\project-python\\fox.jpeg")
 
 
 
-character1 = Moving_Character(600, 600, rabbit_image,False)
-character2 = Moving_Character(650, 650, fox_image,False)
+character1 = Character(600, 600, rabbit_image)
+character2 = Character(650, 650, fox_image)
 
 rabbit_image=pg.transform.scale(rabbit_image,(10,10))
 fox_image=pg.transform.scale(fox_image,(10,10))
