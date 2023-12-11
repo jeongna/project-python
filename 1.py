@@ -104,22 +104,30 @@ def createnewWindow():
                 if (hand_landmarks.landmark[20].y < hand_landmarks.landmark[18].y):
                     finger_5 = True
 
-                if (finger_2 and finger_4 and finger_3):
-                    gesture_text = 'three fingers'
+                fingernum=0
+                fingerlist=[finger_1,finger_2,finger_3,finger_4,finger_5]
+                for i in range(5):
+                    if list[i] is True:
+                        figernum=fingernum+1
 
-                # 5손가락 다 펴져있으면 " 보 "
-                elif (finger_1 and finger_2 and finger_3 and finger_4 and finger_5):
-                    gesture_text = 'Bo'
+                if (figernum==1):
+                    gesture_text = 'one'
 
 
-                # 1, 2번 손가락이 펴져있으면 "가위 "
-                elif (finger_1 and finger_2):
-                    gesture_text = 'Gawi'
+                elif (figernum==2):
+                    gesture_text = 'two'
 
-                # 모든 손가락이 안펴져있으면 " 바위 "
-                elif ((not finger_2) and (not finger_3) and (not finger_4)
-                      and (not finger_5)):
-                    gesture_text = 'Bawi'
+                elif (figernum==3):
+                    gesture_text = 'three'
+
+                elif (figernum==4):
+                    gesture_text = 'four'
+
+                elif (figernum==5):
+                    gesture_text = 'five'
+
+
+
 
 
 
@@ -129,15 +137,15 @@ def createnewWindow():
 
                 # 캠 화면에 손가락을 그림
                 mp_drawing.draw_landmarks(
-                    image, hand_landmarks, mp_hands.HAND_CONNECTIONS)
+                    mediaPipeimage, hand_landmarks, mp_hands.HAND_CONNECTIONS)
 
             # 캠화면에 텍스트를 작성
-            cv2.putText(image, text='223323 : {}'.format(gesture_text)
+            cv2.putText(mediaPipeimage, text='answer : {}'.format(gesture_text)
                         , org=(10, 30), fontFace=cv2.FONT_HERSHEY_SIMPLEX,
                         fontScale=1, color=(0, 0, 255), thickness=2)
 
             # 캠 화면 ( 이미지 )을 화면에 띄움
-            cv2.imshow('image', image)
+            cv2.imshow('image', mediaPipeimage)
 
             # q입력시 종료
             if cv2.waitKey(1) == ord('q'):
