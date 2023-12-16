@@ -154,7 +154,11 @@ def change_label_image():
     # Load the new image
     new_image_path = image_paths[current_image_index]
     new_image = Image.open(new_image_path)
-    new_tk_image = ImageTk.PhotoImage(new_image)
+
+
+    new_size = (300, 300)
+    resized_image1 = new_image.resize(new_size)
+    new_tk_image = ImageTk.PhotoImage(resized_image1)
 
     # Update the label image
     w.config(image=new_tk_image)
