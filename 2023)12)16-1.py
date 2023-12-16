@@ -3,14 +3,21 @@ from tkinter import *
 
 from PIL import Image, ImageTk
 
+
+import mediapipe as mp
+import cv2
+
+
 current_image_index = 0
+
+
 
 window=Tk()
 window.title("game")
 window.geometry("600x600+300+0")
 
 def fingerfuction():
-    import cv2
+
     import mediapipe as mp
 
     # 그리기 도구 지원해주는 서브 패키지
@@ -139,7 +146,7 @@ def change_label_image():
     global current_image_index
 
     # 이미지 파일 경로의 리스트 (자신의 이미지 경로로 바꾸세요)
-    image_paths = ["C:\\Users\\user\Desktop\OIP (1).jpeg", "C:\\Users\\user\Desktop\OIP.jpeg"]
+    image_paths = ["C:\\Users\\user\Desktop\OIP (1).jpeg", "C:\\Users\\user\Desktop\OIP.jpeg","C:\\Users\\user\Desktop\\2.png","C:\\Users\\user\Desktop\\4.jpeg","C:\\Users\\user\Desktop\\5.jpeg","C:\\Users\\user\Desktop\\6.jpeg","C:\\Users\\user\Desktop\\7.jpeg","C:\\Users\\user\Desktop\\8.jpeg","C:\\Users\\user\Desktop\\9.jpeg"]
 
     # Change the index to the next image
     current_image_index = (current_image_index + 1) % len(image_paths)
@@ -156,16 +163,16 @@ def change_label_image():
     new_label1_paths=['1번 아이브','1번 nct','1번 nct127 ','1번 블랙핑크','1번 nct dream','1번 아이브','1번 몬스타엑스','1번 씨스타','1번 시크릿']
     new_label1.config(text=new_label1_paths[current_image_index])
 
-    new_label2_paths = ['2번 블랙핑크', '2번  nct127 ', '2번 블랙핑크', '2번 nct127 ','2번 씨스타','2번 레드벨벳','2번 에스파','2번 레드벨벳','2번 에프엑스']
+    new_label2_paths = ['2번 블랙핑크', '2번  nct127 ', '2번 블랙핑크', '2번 nct127 ','2번 씨스타','2번 레드벨벳','2번 아이브','2번 레드벨벳','2번 에프엑스']
     new_label2.config(text=new_label2_paths[current_image_index])
 
-    new_label3_paths = ['3번 소녀시대', '3번 ', '3번 ', '3번  nct127 ','3번','3번','3번','3번','3번']
+    new_label3_paths = ['3번 BTS', '3번 BlackPink', '3번Ive ', '3번  세븐틴 ','3번 Twice','3번 르세라핌','3번 에스파','3번엑소','3번 소녀시대']
     new_label3.config(text=new_label3_paths[current_image_index])
 
-    new_label4_paths = ['4번  nct127 ', '4번 블랙핑크', '4번  nct127 ', '4번 아이즈원','4번 키스오프라이프','4번 ses','4번 트와이스','4번 아이즈원','4번 아이즈원']
+    new_label4_paths = ['4번  nct127 ', '4번 아이브', '4번  nct ', '4번 아이즈원','4번 키스오프라이프','4번 ses','4번 트와이스','4번 아이즈원','4번 아이즈원']
     new_label4.config(text=new_label4_paths[current_image_index])
 
-    new_label5_paths = ['5번 펑크펑크', '5번 소녀시대', '5번 소년시대', '5번  nct127 ' ,'5번  nct ', '5번  nct127 ', '5번  키스오프라이프 ', '5번  nct 도재정 ', '5번  nct u ']
+    new_label5_paths = ['5번 펑크펑크', '5번 소녀시대', '5번 소년시대', '5번  nct u ' ,'5번  nct ', '5번  nct127 ', '5번  키스오프라이프 ', '5번  nct 도재정 ', '5번  nct u ']
     new_label5.config(text=new_label5_paths[current_image_index])
 
 
