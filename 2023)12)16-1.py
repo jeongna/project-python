@@ -1,6 +1,6 @@
 import tkinter.font
 from tkinter import *
-from turtle import Turtle
+
 from PIL import Image, ImageTk
 
 current_image_index = 0
@@ -153,19 +153,19 @@ def change_label_image():
     w.config(image=new_tk_image)
     w.image = new_tk_image
 
-    new_label1_paths=['1번 남돌2','1번 남돌3','1번 남돌4','1번 남돌5']
+    new_label1_paths=['1번 아이브','1번 nct','1번 nct127 ','1번 블랙핑크','1번 nct dream','1번 아이브','1번 몬스타엑스','1번 씨스타','1번 시크릿']
     new_label1.config(text=new_label1_paths[current_image_index])
 
-    new_label2_paths = ['2번 2남돌2', '2번 남돌23', '2번 남돌24', '2번 남돌25']
+    new_label2_paths = ['2번 블랙핑크', '2번  nct127 ', '2번 블랙핑크', '2번 nct127 ','2번 씨스타','2번 레드벨벳','2번 에스파','2번 레드벨벳','2번 에프엑스']
     new_label2.config(text=new_label2_paths[current_image_index])
 
-    new_label3_paths = ['3번 남돌32', '3번 남돌33', '3번 남돌34', '3번 남돌35']
+    new_label3_paths = ['3번 소녀시대', '3번 ', '3번 ', '3번  nct127 ','3번','3번','3번','3번','3번']
     new_label3.config(text=new_label3_paths[current_image_index])
 
-    new_label4_paths = ['4번 남돌42', '4번 남돌43', '4번 남돌44', '4번 남돌45']
+    new_label4_paths = ['4번  nct127 ', '4번 블랙핑크', '4번  nct127 ', '4번 아이즈원','4번 키스오프라이프','4번 ses','4번 트와이스','4번 아이즈원','4번 아이즈원']
     new_label4.config(text=new_label4_paths[current_image_index])
 
-    new_label5_paths = ['5번 남돌52', '5번 남돌53', '5번 남돌54', '5번 남돌55']
+    new_label5_paths = ['5번 펑크펑크', '5번 소녀시대', '5번 소년시대', '5번  nct127 ' ,'5번  nct ', '5번  nct127 ', '5번  키스오프라이프 ', '5번  nct 도재정 ', '5번  nct u ']
     new_label5.config(text=new_label5_paths[current_image_index])
 
 
@@ -209,7 +209,7 @@ new_label2['fg'] = "black"
 new_label2['bg'] = "green"
 new_label2.pack()
 
-new_label3 = Label(window, text='3번 트와이스',font=font3)
+new_label3 = Label(window, text='3번 뉴진스',font=font3)
 new_label3['fg'] = "black"
 new_label3['bg'] = "green"
 new_label3.pack()
@@ -219,7 +219,7 @@ new_label4['fg'] = "black"
 new_label4['bg'] = "green"
 new_label4.pack()
 
-new_label5 = Label(window, text='5번 뉴진스',font=font3)
+new_label5 = Label(window, text='5번 트와이스',font=font3)
 new_label5['fg'] = "black"
 new_label5['bg'] = "green"
 new_label5.pack()

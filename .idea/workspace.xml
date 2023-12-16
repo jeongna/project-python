@@ -82,7 +82,7 @@
       <workItem from="1701675366905" duration="869000" />
       <workItem from="1701686039337" duration="5000" />
       <workItem from="1702277828110" duration="74000" />
-      <workItem from="1702698790321" duration="9889000" />
+      <workItem from="1702698790321" duration="10535000" />
     </task>
     <servers />
   </component>
@@ -107,6 +107,6 @@
     <SUITE FILE_PATH="coverage/pythonprojectgame_py$pythonprojectgame.coverage" NAME="pythonprojectgame Coverage Results" MODIFIED="1701676116778" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/1_py$main.coverage" NAME="main Coverage Results" MODIFIED="1702707220510" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/PycharmProjects/pythonProject7" />
     <SUITE FILE_PATH="coverage/1_py$2323_12_16.coverage" NAME="2323)12)16 Coverage Results" MODIFIED="1702705668517" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/1_py$2023_12_16_1.coverage" NAME="2023)12)16-1 Coverage Results" MODIFIED="1702708691042" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/1_py$2023_12_16_1.coverage" NAME="2023)12)16-1 Coverage Results" MODIFIED="1702709423534" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
