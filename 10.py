@@ -260,12 +260,14 @@ def change_label_image():
     # Load the new image
     new_image_path = image_paths[current_image_index]
     new_image = Image.open(new_image_path)
-    new_tk_image = ImageTk.PhotoImage(new_image)
+    new_size = (300, 300)
+    resized_image1 = new_image.resize(new_size)
+    new_tk_image = ImageTk.PhotoImage(resized_image1)
 
     # Update the label image
     w.config(image=new_tk_image)
     w.image = new_tk_image
-
+    
     new_label1_paths=['1번 아이브','1번 nct','1번 nct127 ','1번 블랙핑크','1번 nct dream','1번 아이브','1번 몬스타엑스','1번 씨스타','1번 시크릿']
     new_label1.config(text=new_label1_paths[current_image_index])
 
