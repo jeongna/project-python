@@ -1,0 +1,173 @@
+!pip install dlib
+
+!wget http://dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2
+
+!bzip2 -dk shape_predictor_68_face_landmarks.dat.bz2
+
+import tkinter as tk
+from tkinter import filedialog
+import cv2
+import dlib
+import numpy as np
+from PIL import Image, ImageTk
+
+# Dlib의 얼굴 인식기와 특징점 모델 로드 
+detector = dlib.get_frontal_face_detector()
+predictor = dlib.shape_predictor("shape_predictor_68_face_landmarks.dat")
+
+def select_images():
+    file_paths = filedialog.askopenfilenames()  # 여러 이미지 선택
+    images = [cv2.imread(path) for path in file_paths]
+    blended_face = align_and_blend_faces(images)
+
+    # Tkinter에서 사용할 수 있는 형식으로 변환하여 표시
+    b, g, r = cv2.split(blended_face)
+    img = cv2.merge((r, g, b))
+    im = Image.fromarray(img)
+    imgtk = ImageTk.PhotoImage(image=im)
+    panel = tk.Label(window, image=imgtk)
+    panel.image = imgtk
+    panel.pack()
+
+# Tkinter 윈도우 설정
+window = tk.Tk()
+window.title("얼굴 합성 앱")
+
+# 이미지 선택 버튼
+select_button = tk.Button(window, text="이미지 선택", command=select_images)
+select_button.pack()
+
+# GUI 시작
+window.mainloop()
+
+# 공통 경로 정의
+base_path = 'C:/Users/godls/OneDrive/바탕 화면/'
+
+# image1 (Newjeans) 
+image_files1 = ['image1_1.jpg', 'image1_2.jpg', 'image1_3.jpg', 'image1_4.jpg', 'image1_5.jpg']
+images1 = [cv2.imread(base_path + filename) for filename in image_files1]
+
+# 얼굴 합성
+combined_face1 = align_and_blend_faces(images1)
+
+# 결과 표시
+cv2.imshow('Combined Face', combined_face1)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+
+## image2 (BTS)
+
+image_files2 = ['image2_1.jpg', 'image2_2.jpg', 'image2_3.jpg', 'image2_4.jpg', 'image2_5.jpg']
+images2 = [cv2.imread(base_path + filename) for filename in image_files2]
+
+# 얼굴 합성
+combined_face2 = align_and_blend_faces(images2)
+
+# 결과 표시
+cv2.imshow('Combined Face', combined_face2)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+
+## image3 (BlackPink)
+
+image_files3 = ['image3_1.jpg', 'image3_2.jpg', 'image3_3.jpg', 'image3_4.jpg']
+images3 = [cv2.imread(base_path + filename) for filename in image_files3]
+
+# 얼굴 합성
+combined_face3 = align_and_blend_faces(images3)
+
+# 결과 표시
+cv2.imshow('Combined Face', combined_face3)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+
+## image4 (Ive)
+
+image_files4 = ['image4_1.jpg', 'image4_2.jpg', 'image4_3.jpg','image4_4.jpg','image4_5.jpg']
+images4 = [cv2.imread(base_path + filename) for filename in image_files4]
+
+# 얼굴 합성
+combined_face4 = align_and_blend_faces(images4)
+
+# 결과 표시
+cv2.imshow('Combined Face', combined_face4)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+
+## image5 (세븐틴)
+
+image_files5 = ['image5_1.jpg','image5_2.jpg','image5_3.jpg','image5_4.jpg','image5_5.jpg','image5_6.jpg']
+images5 = [cv2.imread(base_path + filename) for filename in image_files5]
+
+# 얼굴 합성
+combined_face10 = align_and_blend_faces(images5)
+
+# 결과 표시
+cv2.imshow('Combined Face', combined_face5)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+
+## image6 (Twice)
+
+image_files6 = ['image6_1.jpg','image6_2.jpg','image6_3.jpg','image6_4.jpg','image6_5.jpg','image6_6.jpg','image6_7.jpg','image6_8.jpg']
+images6 = [cv2.imread(base_path + filename) for filename in image_files6]
+
+# 얼굴 합성
+combined_face6 = align_and_blend_faces(images6)
+
+# 결과 표시
+cv2.imshow('Combined Face', combined_face6)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+
+## image7 (르세라핌)
+
+image_files7 = ['image7_1.jpg','image7_2.jpg','image7_3.jpg','image7_4.jpg','image7_5.jpg']
+images7 = [cv2.imread(base_path + filename) for filename in image_files7]
+
+# 얼굴 합성
+combined_face7 = align_and_blend_faces(images7)
+
+# 결과 표시
+cv2.imshow('Combined Face', combined_face7)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+
+## image8 (에스파)
+
+image_files8 = ['image8_1.jpg','image8_2.jpg','image8_3.jpg','image8_4.jpg']
+images8 = [cv2.imread(base_path + filename) for filename in image_files8]
+
+# 얼굴 합성
+combined_face8 = align_and_blend_faces(images8)
+
+# 결과 표시
+cv2.imshow('Combined Face', combined_face8)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+
+## image9 (엑소)
+
+image_files9 = ['image9_1.jpg','image9_2.jpg','image9_3.jpg','image9_4.jpg','image9_5.jpg','image9_6.jpg']
+images9 = [cv2.imread(base_path + filename) for filename in image_files9]
+
+# 얼굴 합성
+combined_face9 = align_and_blend_faces(images9)
+
+# 결과 표시
+cv2.imshow('Combined Face', combined_face9)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+
+## image10 (소녀시대)
+
+image_files10 = ['image10_1.jpg','image10_2.jpg','image10_3.jpg','image10_4.jpg','image10_5.jpg','image10_6.jpg']
+images10 = [cv2.imread(base_path + filename) for filename in image_files10]
+
+# 얼굴 합성
+combined_face10 = align_and_blend_faces(images10)
+
+# 결과 표시
+cv2.imshow('Combined Face', combined_face10)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
